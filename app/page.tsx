@@ -1,8 +1,8 @@
 import { ChevronRightIcon } from "lucide-react";
-import Image from "next/image";
 import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import ProductList from "./_components/product.list";
+import PromoBanner from "./_components/promo-banner";
 import Search from "./_components/search";
 import { Button } from "./_components/ui/button";
 import { db } from "./_lib/prisma";
@@ -39,13 +39,9 @@ const Home = async () => {
       </div>
 
       <div className="px-5 pt-6">
-        <Image
+        <PromoBanner
           src="/promo-banner01.png"
-          alt="Até 30% de desconto em pizzas"
-          height={0}
-          width={0}
-          className="h-auto w-full object-contain"
-          sizes="100vw"
+          alt="até 30% de descontos em pizzas"
         />
       </div>
 
@@ -62,6 +58,26 @@ const Home = async () => {
         </div>
 
         <ProductList products={products} />
+      </div>
+
+      <div className="px-5 pt-6">
+        <PromoBanner
+          src="/promo-banner02.png"
+          alt="a partir de R$17,90 em lanches"
+        />
+      </div>
+
+      <div className="space-y-4 pt-6">
+        <div className="flex items-center justify-between px-5">
+          <h2 className="font-semibold">Restaurantes Recomendados</h2>
+          <Button
+            variant="ghost"
+            className="h-fit p-0 text-xs text-primary hover:bg-transparent"
+          >
+            Ver todos
+            <ChevronRightIcon size={16} />
+          </Button>
+        </div>
       </div>
     </>
   );
