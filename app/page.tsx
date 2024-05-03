@@ -3,6 +3,7 @@ import CategoryList from "./_components/category-list";
 import Header from "./_components/header";
 import ProductList from "./_components/product.list";
 import PromoBanner from "./_components/promo-banner";
+import RestaurantList from "./_components/restaurant-list";
 import Search from "./_components/search";
 import { Button } from "./_components/ui/button";
 import { db } from "./_lib/prisma";
@@ -67,7 +68,7 @@ const Home = async () => {
         />
       </div>
 
-      <div className="space-y-4 pt-6">
+      <div className="space-y-4 py-6">
         <div className="flex items-center justify-between px-5">
           <h2 className="font-semibold">Restaurantes Recomendados</h2>
           <Button
@@ -78,6 +79,8 @@ const Home = async () => {
             <ChevronRightIcon size={16} />
           </Button>
         </div>
+
+        <RestaurantList />
       </div>
     </>
   );
