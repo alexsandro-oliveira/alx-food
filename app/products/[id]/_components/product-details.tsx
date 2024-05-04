@@ -158,6 +158,9 @@ const ProductDetails = ({
       </div>
 
       {/* BOTAO DE ADD AO CARRINHO */}
+      <div className="mt-6 px-5">
+        <Button className="w-full font-semibold">Adicionar à Sacola</Button>
+      </div>
     </div>
   );
 };
