@@ -3,16 +3,18 @@ import { HeartIcon, StarIcon, TimerIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { formatCurrency } from "../_helpers/price";
+import { cn } from "../_lib/utils";
 import { Button } from "./ui/button";
 
 interface RestaurantItemProps {
   restaurant: Restaurant;
+  className?: string;
 }
 
-const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
+const RestaurantItem = ({ restaurant, className }: RestaurantItemProps) => {
   return (
     <Link
-      className="min-w-[266px] max-w-[266px] "
+      className={cn("min-w-[266px] max-w-[266px]", className)} //cn adiciona merge entre classes
       href={`/restaurants/${restaurant.id}`}
     >
       <div className="w-full space-y-3">
@@ -34,7 +36,7 @@ const RestaurantItem = ({ restaurant }: RestaurantItemProps) => {
             size="icon"
             className="absolute right-2 top-2 h-7 w-7 rounded-full bg-gray-700"
           >
-            <HeartIcon size={20} className="fill-white" />
+            <HeartIcon size={16} className="fill-white" />
           </Button>
         </div>
 
