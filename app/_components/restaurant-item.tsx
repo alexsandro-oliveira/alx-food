@@ -47,9 +47,10 @@ const RestaurantItem = ({ restaurant, className }: RestaurantItemProps) => {
           {/* INFORMAÇOES DA ENTREGA */}
           <div className="flex gap-3">
             {/* CUSTO DE ENTREGA */}
+
             <div className="flex items-center gap-1">
               <Image
-                src="./icon-bike.svg"
+                src="/icon-bike.svg"
                 alt="delivery icon"
                 width={14}
                 height={14}
